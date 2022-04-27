@@ -12,6 +12,9 @@ datagroup: looker_training_ecommerce_default_datagroup {
 persist_with: looker_training_ecommerce_default_datagroup
 
 explore: orders {
+
+  label: "E-commerce Database"
+
   join: customers {
     type: left_outer
     sql_on: ${orders.customer_id} = ${customers.id} ;;
