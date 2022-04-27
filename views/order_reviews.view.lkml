@@ -68,7 +68,7 @@ view: order_reviews {
 
   dimension_group: creation_to_answer_time {
     type: duration
-    intervals: [day, week, month, hour]
+    intervals: [day, week, month]
     sql_start: ${creation_time} ;;
     sql_end: ${answer_timestamp_time} ;;
   }
