@@ -55,4 +55,13 @@ view: order_items {
     type: count
     drill_fields: [id, products.product_category_name, products.product_id, orders.order_id, sellers.seller_id]
   }
+
+
+
+
+  dimension: price_tier {
+    type: tier
+    tiers: [0, 25, 50, 75, 100]
+    sql: ${price} ;;
+  }
 }
