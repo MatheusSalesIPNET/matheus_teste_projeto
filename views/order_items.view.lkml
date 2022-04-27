@@ -55,11 +55,4 @@ view: order_items {
     type: count
     drill_fields: [id, products.product_category_name, products.product_id, orders.order_id, sellers.seller_id]
   }
-
-
-  measure: total_sale_price {
-    type: sum
-    sql: ${price} ;;
-    drill_fields: [id, customers.id]
-  }
 }
