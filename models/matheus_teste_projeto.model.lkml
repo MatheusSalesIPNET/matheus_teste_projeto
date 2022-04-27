@@ -27,17 +27,17 @@ explore: orders {
     relationship: one_to_many
   }
 
-  # join: products {
-  #   type: left_outer
-  #   sql_on: ${products.id} = ${order_items.product_id} ;;
-  #   relationship: many_to_one
-  # }
+  join: products {
+    type: left_outer
+    sql_on: ${products.id} = ${order_items.product_id} ;;
+    relationship: many_to_one
+  }
 
-  # join: sellers {
-  #   type: left_outer
-  #   sql_on: ${sellers.id} = ${order_items.seller_id} ;;
-  #   relationship: many_to_one
-  # }
+  join: sellers {
+    type: left_outer
+    sql_on: ${sellers.id} = ${order_items.seller_id} ;;
+    relationship: many_to_one
+  }
 
   join: order_reviews {
     type: left_outer
