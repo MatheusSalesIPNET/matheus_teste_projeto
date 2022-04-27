@@ -57,11 +57,9 @@ view: order_items {
   }
 
 
-
-
-  dimension: price_tier {
-    type: tier
-    tiers: [0, 25, 50, 75, 100]
+  measure: total_sale_price {
+    type: sum
     sql: ${price} ;;
+    drill_fields: [id, customers.id]
   }
 }
