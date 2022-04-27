@@ -61,4 +61,15 @@ view: order_reviews {
     type: count
     drill_fields: [orders.order_id]
   }
+
+
+
+
+
+  dimension_group: creation_to_answer_time {
+    type: duration
+    intervals: [day, week, month]
+    sql_start: ${TABLE}.review_creation_date ;;
+    sql_end: ${TABLE}.review_answer_timestamp ;;
+  }
 }
