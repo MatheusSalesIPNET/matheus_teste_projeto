@@ -27,17 +27,17 @@ explore: orders {
     relationship: one_to_many
   }
 
-  join: products {
-    type: left_outer
-    sql_on: ${products.id} = ${order_items.product_id} ;;
-    relationship: many_to_one
-  }
+  # join: products {
+  #   type: left_outer
+  #   sql_on: ${products.id} = ${order_items.product_id} ;;
+  #   relationship: many_to_one
+  # }
 
-  join: sellers {
-    type: left_outer
-    sql_on: ${sellers.id} = ${order_items.seller_id} ;;
-    relationship: many_to_one
-  }
+  # join: sellers {
+  #   type: left_outer
+  #   sql_on: ${sellers.id} = ${order_items.seller_id} ;;
+  #   relationship: many_to_one
+  # }
 
   join: order_reviews {
     type: left_outer
@@ -53,21 +53,21 @@ explore: orders {
 }
 
 
-#explore: customers {}
+# explore: customers {}
 
-#explore: order_reviews {
-#  join: orders {
-#    type: left_outer
-#    sql_on: ${order_reviews.order_id} = ${orders.id} ;;
-#    relationship: many_to_one
-#  }
+# explore: order_reviews {
+#   join: orders {
+#     type: left_outer
+#     sql_on: ${order_reviews.order_id} = ${orders.id} ;;
+#     relationship: many_to_one
+#   }
 
-#  join: customers {
-#    type: left_outer
-#    sql_on: ${orders.customer_id} = ${customers.id} ;;
-#    relationship: many_to_one
-#  }
-#}
+#   join: customers {
+#     type: left_outer
+#     sql_on: ${orders.customer_id} = ${customers.id} ;;
+#     relationship: many_to_one
+#   }
+# }
 
 
 # explore: products {}
