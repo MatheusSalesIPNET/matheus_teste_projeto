@@ -55,4 +55,8 @@ view: order_items {
     type: count
     drill_fields: [id, products.product_category_name, products.product_id, orders.order_id, sellers.seller_id]
   }
+
+  measure: count_distinct {
+    type: count_distinct
+  }
 }
