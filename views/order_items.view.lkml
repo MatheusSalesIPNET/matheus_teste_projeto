@@ -15,6 +15,8 @@ view: order_items {
     sql: ${TABLE}.order_id ;;
   }
 
+  ###
+
   dimension: seller_id {
     type: string
     hidden: yes
